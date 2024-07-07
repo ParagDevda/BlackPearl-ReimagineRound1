@@ -1,0 +1,220 @@
+@media (max-width: 600px){
+    #nav #n1 , #n3{
+      display: none;
+    }
+    #nav #n2 img{
+      height: 5vh;
+    }
+    #nav{
+      padding: 0 5vw;
+    }
+    #nav #n4{
+      display: initial;
+    }
+    #nav #n4 i{
+      color: black;
+      font-size: 3vh;
+    }
+    .slide{
+      height: 85%;
+      overflow: hidden;
+    }
+    .slide h1{
+      font-size: 17vw;
+    }
+    #urus{
+      top: 40%;
+    }
+    .footer-content{
+      /* flex-direction:column; */
+      height:auto;
+    }
+    .footer-content h5{
+      font-size: 11px;
+      margin-bottom: -0.1vh;
+    }
+    .footer-content h6{
+      font-size: 9px;
+      margin-bottom: 0vh;
+      line-height: 13px;
+      font-weight: 100;
+    }
+    .foot-left,.foot-right{
+      width: 45%;
+      padding: 5px 0px;
+    }
+    .foot-right{
+      padding: 5px 0px;
+    }
+    .foot-left-top{
+      width:auto;
+    }
+    .ltopup{
+      margin-bottom: 3px;
+    }
+    .ltopup,.ltopdown{
+      gap: 10px;
+      flex-wrap: wrap;
+      row-gap:3px;
+    }
+    .ltopdown{
+      margin-top: 10px;
+    }
+    .last{
+      margin-top: 20px;
+    }
+    /* .foot-line{
+      width: auto;
+      height: 1px;
+    } */
+    #bull,#bullimg,#progress{
+      height: 30vw;
+      width: 30vw;
+    }
+    .progressno{
+      right:-7px;
+    }
+    .page2-center,.page2-center-left,.page2-center-right{
+      flex-direction: column;
+    }
+    .page2-center-right{
+      gap: 30px;
+    }
+    .rgt-base{
+      text-align: center;
+      margin-top: 30px;
+    }
+    .page2{
+      padding: 0px 0;
+      flex-direction: row;
+      /* position: sticky;
+      top: 2%; */
+    }
+    /* .page2-line-up,.page2-line-down{
+      width: 0.1vw;
+      height: 100%;
+    } */
+    .page2-center-line1,.page3-center-line1{
+      width: 1.5px;
+      height: 19.8vh;
+    }
+    .page2-center-line3,.page2-center-line2 {
+      top: 101%;
+      width: 3vw;
+    }
+    .page2-center-line2{
+      right: 43.5%;
+      /* rotate: -45deg; */
+      /* transform: rotate(180deg); */
+    }
+    .page2-center-line3{
+      right: 48.8%;
+      /* rotate: 45deg; */
+      /* transform: rotate(180deg); */
+    }
+    .page2-center-right-img,.page3-center-left-img
+    {
+      height: 19vh;
+      width: 30vw;
+    }
+    .page2-center-right h5 ,h6,.page3-center-left-text h5,h6{
+      /* width: 40vw; */
+      text-align: center;
+    }
+    .page2-center-right h5 ,.page3-center-left-text h5{
+      font-size: 2.15vh;
+      margin-bottom:0.5vh;
+    }
+    .page2-center-right h6 ,.page3-center-left-text h6{
+      font-size: 1.8vh;
+    }
+    .page3-center-left-text h6{
+      margin-top: 10px;
+    }
+  
+    .khali{
+      height: 200vh;
+    }
+    .page2-center-left img,.page3-center-right img{
+      width: 40vw;
+      /* margin-top: -20px; */
+    }
+    .page3-center-right img{
+       margin-top: -20px;
+       margin-bottom: 20px;
+    }
+    .page3-center ,.page3-center-right,.page3-center-left{
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .page3-center-line3,.page3-center-line2{
+      top: 101%;
+      width: 3vw;
+  
+    }
+    .page3-center-line3{
+      left: 48.8%;
+    }
+    .page3-center-line2{
+      left: 43.8%;
+    }
+    .page3-center-left-img{
+      margin-top: 10px;
+    }
+    #page4 button{
+      font-size: 4.5vw;
+      padding: 1.7vw 8.5vw;
+    }
+    .scroll-down h3{
+      font-size: 2vw;
+    }
+    
+    .scroll-p{
+      width: 10vw;
+      height: 3px;
+    }
+    
+    .scrolling{
+      width: 0vw;
+      height: 3px;
+    }
+    #social{
+      font-size: 30px;
+    }
+    #page1 button{
+      font-size: 12vw;
+      /* mix-blend-mode: difference; */
+      z-index: 999 !important;
+      top: 44%;
+      color: rgb(83, 80, 80);
+    }
+    .car{
+      z-index: 0 !important;
+    }
+      #huracan ,#revuelto,#urus-h1{
+        z-index: 0 !important ;
+      }
+      .layer img{
+        width: 80vw;
+        margin-top:-20%;
+      }
+      #layer1{
+       top: 20%;
+      }
+      #layer2 {
+        left: 35%;
+      }
+      #page1{
+        height: 110vh;
+      }
+      .revoltoh4{
+        width: 40vh;
+        top: 65%;
+        font-size: 3vw;
+        line-height: 2.5vw;
+      }
+      .urusline{
+        display: none;
+      }
+  }

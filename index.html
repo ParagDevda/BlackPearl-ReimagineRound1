@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="responsive.css">
+    <link
+      rel="shortcut icon"
+      href="./Assets/images/lemb-icon-white.png"
+      type="image/x-icon"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lamborgini</title>
+  </head>
+  <body>
+    <div
+      id="loader"
+      class="fixed z-[9999] h-full  w-full bg-black flex flex-col items-center justify-center  "
+    >
+      <div id="bull" class="relative h-[12vw] w-[12vw] max-sm:h-[30vw] max-sm:w-[30vw] ">
+        <img
+          id="bullimg"
+          class="absolute bottom-0 h-[12vw] w-[12vw] max-sm:h-[30vw] max-sm:w-[30vw] "
+          src="./Assets/images/lemb-icon-grey.png"
+        />
+        <img
+          id="progress"
+          class="absolute bottom-0 w-[12vw] object-cover object-bottom ease-in-out duration-300 ... max-sm:h-[30vw] max-sm:w-[30vw]"
+          src="./Assets/images/lemb-icon-white.png"
+        />
+        <div class="progressno absolute -right-16 bottom-0 max-sm:-right-[10px]">
+          <div class="counter text-white text-[2vw] max-sm:text-[3vw] leading-none flex" id="counter">
+            <div id="first-digit" class="digit relative w-[1ch] h-[1em]">
+              <span id="first-digit">0</span>
+            </div>
+            <div class="digit relative w-[1ch] h-[1em]"><span >0</span></div>
+            <div class="digit relative w-[1ch] h-[1em]"><span >0</span></div>
+            <div ><span class="text-[1.2vw] ml-[2px]">%</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="tip text-xs text-white fixed bottom-5">
+        For an enhanced experience, please wear headphones.
+      </p>
+    </div>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="main" class="overflow-x-hidden w-screen bg-black text-white">
+      <div id="nav"
+        class="h-20 w-screen z-[9] px-16 flex items-center justify-between max-sm:px-[5vw] text-[#ededed] "
+      >
+        <div
+          id="n1"
+          class="flex items-center gap-14 text-base font-bold justify-between max-sm:hidden "
+        >
+          <div ><a class="part1 h-[1.5vw] w-[4.5vw] " href="#">MODELS <br> MODELS</a>
+          </div>
+          <div class="x"><a class="part1 h-[1.5vw] w-[4.5vw]" href="#">BEYOND <br>BEYOND </a></div>
+          <div class="x"><a class="part1 h-[1.5vw] w-[6.5vw]" href="#">OWNERSHIP <br>OWNERSHIP</a> </div>
+        </div>
+        <div id="n2">
+          <img
+            src="./Assets/images/lamborghini-logo-1.svg"
+            alt=""
+            class="h-14 max-sm:h-[5vh]"
+          />
+        </div>
+        <div
+          id="n3"
+          class="flex items-center gap-14 text-base font-bold justify-between max-sm:hidden "
+        >
+          <div class="x"><a class="part1 h-[1.5vw] w-[7vw]" href="#">MOTOSPORT <br> MOTOSPORT</a></div>
+          <div class="x"><a class="part1 h-[1.5vw] w-[7vw]" href="#">DEALERSHIP <br>DEALERSHIP </a></div>
+          <div class="px-5 rounded-full bg-[#2d2d2d]">
+            <a class="part1 h-[1.5vw] w-[2.5vw] flex items-center font-thin" href="#"><span class="text-[19px] mt-[2px]" >A</span><span class="text-[15px] -mt-[7px] ml-[5px] pl-[3px]  border-l">文</span></a>
+          </div>
+        </div>
+        <div id="n4" class="hidden max-sm:auto "><i class="ri-menu-line max-sm:text-[3vh] max-sm:text-black"></i></div>
+      </div>
+      <div
+        id="page1"
+        class="relative h-[90vh] w-full flex items-center justify-center max-sm:h-[110vh] "
+      > <div class="explore"></div>
+        <div class="h-full realtive">
+          <div class="slider-container h-full">
+            <div class="slider-track h-full w-screen">
+              <div
+                class="slide relative text-9xl h-full w-full font-bold text-[#2d2d2d] flex items-center justify-center max-sm:h-[85%] max-sm:overflow-hidden "
+              >
+                <h1 id="huracan" class="absolute top-[37%] -translate-y-[50%] z-10 max-sm:text-[17vw]">
+                  HURACÁN
+                </h1>
+                <h4 class="revoltoh4 text-[#d1d1d1] max-sm:w-[40vh] max-sm:top-[65%] max-sm:text-[3vw]  max-sm:leading-[2.5vw] w-[32vw] text-[15px] absolute text-[#d1d1d1] font-thin top-[53.5%] left-[5%] ">The Lamborghini Huracán is a symphony of precision engineering and breathtaking design. With its naturally aspirated V10 engine, the Huracán offers a visceral driving experience that is both exhilarating and unmatched. Its aerodynamic lines, luxurious cabin, and advanced technology create a supercar that is as comfortable on the track as it is on the open road. The Huracán is a perfect blend of power, style, and sophistication, embodying the spirit of Lamborghini.</h4>
+                <ul id="scene" class="scene">
+                  <li class="layer" id="layer1" data-depth="-.1">
+                    <img 
+                    class="absolute w-[28vw] top-[24%] left-[15%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%] max-sm:mt-[20%]"
+                    src="./Assets/images/elem-3.1.png"
+                  />
+                  </li>
+                  <li class="layer " data-depth="-.1">
+                    <img
+                    class="absolute w-[28vw] top-[95%] left-[25%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]  max-sm:top-[99%]"
+                    src="./Assets/images/elem-3.2.png"
+                  />
+                  </li>
+                  <li class="layer" data-depth=".1">
+                    <img
+                    class="absolute w-[28vw] top-[20%] left-[85%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]"
+                    src="./Assets/images/elem-3.3.png"
+                  />
+                  </li>
+                  <div class="urusline max-sm:hidden">
+                    <h5 class="z-[99] absolute top-[21%] right-[27.5%] text-[#d1d1d1] text-[1vw]"> Shape Your Adventure <a href="https://www.lamborghini.com/en-en/models/huracan/huracan-sterrato"><i class="ri-arrow-right-up-line border border-black rounded-full"></i></a> </h5>
+                    <img class="absolute z-[95] w-[20vw] top-[22.6%] right-[19.8%]" src="./Assets/images/urus line.svg" alt="">
+                  </div>
+                </ul>
+                </ul>
+                <img
+                  class="car absolute -translate-y-[50%] -translate-x-[50%] left-[67%] top-[50%] z-50"
+                  src="./Assets/images/hur-1.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="slide relative text-9xl h-full w-full font-bold text-[#2d2d2d] flex items-center justify-center max-sm:h-[85%] max-sm:overflow-hidden"
+              >
+                <h1 id="revuelto" class="absolute top-[37%] -translate-y-[50%] z-10 max-sm:text-[17vw]">
+                  REVUELTO
+                </h1>
+                <h4 class="revoltoh4 text-[#d1d1d1] max-sm:w-[40vh] max-sm:top-[65%] max-sm:text-[3vw] max-sm:leading-[2.5vw] w-[32vw] text-[15px] absolute  font-thin top-[53.5%] left-[5%] ">The Revuelto is Lamborghini's electrifying evolution, pushing the boundaries  of hybrid technology and design. Combining the raw power of a V12  engine with cutting-edge electric motors, the Revuelto delivers an unprecedented driving experience. Its aggressive styling, advanced aerodynamics, and luxurious interior make it a masterpiece of performance and sophistication. Every drive is an adventure, a testament to Lamborghini's relentless pursuit of innovation and excellence.</h4>
+                <ul id="scene" class="scene">
+                  <li class="layer" data-depth="-.1">
+                    <img
+                    class="absolute w-[26vw] top-[24%] left-[15%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]"
+                    src="./Assets/images/elem-1.1.png"
+                  />
+                  </li>
+                  <li class="layer" data-depth="-.1">
+                    <img
+                    class="absolute w-[26vw] top-[95%] left-[25%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%] max-sm:top-[99%]"
+                    src="./Assets/images/elem-1.2.png"
+                  />
+                  </li>
+                  <li class="layer" data-depth=".1">
+                    <img
+                    class="absolute w-[28vw] top-[20%] left-[85%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]"
+                    src="./Assets/images/elem-1.3.png"
+                  />
+                  </li>
+                  <div class="urusline max-sm:hidden">
+                    <h5 class="z-[99] absolute top-[21%] right-[27.5%] text-[#d1d1d1] text-[1vw]"> Shape Your Adventure <a href="https://configurator.lamborghini.com/configurator/intro/carline/32006-20111"><i class="ri-arrow-right-up-line border border-black rounded-full"></i></a></h5>
+                    <img class="absolute z-[95] w-[20vw] top-[22.6%] right-[19.8%]" src="./Assets/images/urus line.svg" alt="">
+                  </div>
+                </ul>
+                <img
+                  class="car absolute -translate-y-[50%] -translate-x-[50%] left-[67%] top-[50%] z-50"
+                  src="./Assets/images/rev-1.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="slide relative text-9xl h-full w-full font-bold text-[#2d2d2d] flex items-center justify-center max-sm:h-[85%] max-sm:overflow-hidden"
+              >
+                <h1 id="urus-h1"  class="absolute top-[40%] -translate-y-[50%] z-10 max-sm:text-[17vw]">URUS</h1>
+                <h4 class="revoltoh4 text-[#d1d1d1] max-sm:w-[40vh] max-sm:top-[65%] max-sm:text-[3vw] max-sm:leading-[2.5vw] w-[31vw] text-[15px] absolute  font-thin top-[53.5%] left-[5%] ">The Lamborghini Urus redefines what an SUV can be, merging the power and performance of a supercar with the versatility of a family vehicle. Its twin-turbo V8 engine, coupled with a bold and dynamic design, ensures that the Urus stands out in any environment. Whether conquering the urban jungle or exploring off-road terrains, the Urus delivers an unparalleled driving experience with its luxurious interior, advanced technology, and extraordinary performance. It’s not just an SUV. it's a Lamborghini.</h4>
+                <ul id="scene" class="scene">
+                  <li class="layer" data-depth="-.1">
+                    <img
+                    class="absolute w-[28vw] top-[24%] left-[15%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]"
+                    src="./Assets/images/elem-2.1.png"
+                  />
+                  </li>
+                  <li class="layer" data-depth="-.1">
+                    <img
+                    class="absolute w-[28vw] top-[95%] left-[25%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]  max-sm:-mt-[20%] max-sm:top-[99%]"
+                    src="./Assets/images/elem-2.2.png"
+                  />
+                  </li>
+                  <li class="layer" data-depth=".1">
+                    <img
+                    class="absolute w-[28vw] top-[20%] left-[85%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]"
+                    src="./Assets/images/elem-2.3.png"
+                  />
+                  </li>
+                  <div class="urusline max-sm:hidden">
+                    <h5 class="z-[99] absolute top-[21%] right-[27.5%] text-[#d1d1d1] text-[1vw]"> Shape Your Adventure <a href="https://configurator.lamborghini.com/configurator/intro/carline/32005-20111"><i class="ri-arrow-right-up-line border border-black rounded-full"></i></a> </h5>
+                    <img class="absolute z-[95] w-[20vw] top-[22.6%] right-[19.8%]" src="./Assets/images/urus line.svg" alt="">
+                  </div>
+                </ul>
+                <img
+                  id="urus"
+                  class="car z-50 absolute w-[66vw]  -translate-x-[50%] left-[69%] bottom-[0%] max-sm:top-40%"
+                  src="./Assets/images/uru-1.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="slide relative text-9xl h-full w-full font-bold text-[#2d2d2d] flex items-center justify-center max-sm:h-[85%] max-sm:overflow-hidden"
+              >
+                <h1 id="huracan" class="absolute top-[37%]  -translate-y-[50%] z-10 max-sm:text-[17vw]">
+                  HURACÁN
+                </h1>
+                <h4 class="revoltoh4 text-[#d1d1d1] max-sm:w-[40vh] max-sm:top-[65%] max-sm:text-[3vw] max-sm:leading-[2.5vw] w-[32vw] text-[15px] absolute font-thin top-[53.5%] left-[5%] ">The Revuelto is Lamborghini's electrifying evolution, pushing the boundaries  of hybrid technology and design. Combining the raw power of a V12  engine with cutting-edge electric motors, the Revuelto delivers an unprecedented driving experience. Its aggressive styling, advanced aerodynamics, and luxurious interior make it a masterpiece of performance and sophistication. Every drive is an adventure, a testament to Lamborghini's relentless pursuit of innovation and excellence.</h4>
+                <ul id="scene" class="scene">
+                  <li class="layer" data-depth="-.1">
+                    <img
+                    class="absolute w-[30vw] top-[18%] left-[18%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]"
+                    src="./Assets/images/elem-3.1.png"
+                  />
+                  </li>
+                  <li class="layer" data-depth="-.1">
+                    <img
+                    class="absolute w-[28vw] top-[95%] left-[25%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]  max-sm:-mt-[20%] max-sm:top-[99%]"
+                    src="./Assets/images/elem-3.2.png"
+                  />
+                  </li>
+                  <li class="layer" data-depth=".1">
+                    <img
+                    class="absolute w-[28vw] top-[20%] left-[85%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]"
+                    src="./Assets/images/elem-3.3.png"
+                  />
+                  </li>
+                  <div class="urusline max-sm:hidden">
+                    <h5 class="z-[99] absolute top-[21%] right-[27.5%] text-[#d1d1d1] text-[1vw]"> Shape Your Adventure <a href="https://www.lamborghini.com/en-en/models/huracan/huracan-sterrato"><i class="ri-arrow-right-up-line border border-black rounded-full"></i></a></h5>
+                    <img class="absolute z-[95] w-[20vw] top-[22.6%] right-[19.8%]" src="./Assets/images/urus line.svg" alt="">
+                  </div>
+                </ul>
+                </ul>
+                <img
+                  class="car absolute -translate-y-[50%] -translate-x-[50%] left-[67%] top-[50%] z-50"
+                  src="./Assets/images/hur-1.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="slide relative text-9xl h-full w-full font-bold text-[#2d2d2d] flex items-center justify-center max-sm:h-[85%] max-sm:overflow-hidden"
+              >
+                <h1 class="absolute top-[37%] -translate-y-[50%] max-sm:text-[17vw]">REVUELTO</h1>
+                <ul id="scene" class="scene">
+                  <li class="layer" data-depth="-.1">
+                    <img
+                    class="absolute w-[28vw] top-[24%] left-[15%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]"
+                    src="./Assets/images/elem-1.1.png"
+                  />
+                  </li>
+                  <li class="layer" data-depth="-.1">
+                    <img
+                    class="absolute w-[28vw] top-[95%] left-[25%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]  max-sm:-mt-[20%] max-sm:top-[99%]"
+                    src="./Assets/images/elem-1.2.png"
+                  />
+                  </li>
+                  <li class="layer" data-depth=".1">
+                    <img
+                    class="absolute w-[28vw] top-[20%] left-[85%] -translate-x-[50%] -translate-y-[50%] max-sm:w-[80vw] max-sm:-mt-[20%]"
+                    src="./Assets/images/elem-1.3.png"
+                  />
+                  </li>
+                  <div class="urusline max-sm:hidden">
+                    <h5 class="z-[99] absolute top-[21%] right-[27.5%] text-[#d1d1d1] text-[1vw]"> Shape Your Adventure <a href="https://configurator.lamborghini.com/configurator/intro/carline/32006-20111"><i class="ri-arrow-right-up-line border border-black rounded-full"></i></a></h5>
+                    <img class="absolute z-[95] w-[20vw] top-[22.6%] right-[19.8%]" src="./Assets/images/urus line.svg" alt="">
+                  </div>
+                </ul>
+                <img
+                  class="car absolute -translate-y-[50%] -translate-x-[50%] left-[67%] top-[50%] z-50"
+                  src="./Assets/images/rev-1.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            id="prev"
+            class="px-6 py-4 text-[4vw] max-sm:text-[12vw] max-sm:top-[44%] z-50  rounded-full absolute left-0 top-[50%] -translate-y-[50%]"
+          >
+          <i class="ri-arrow-left-wide-line"></i>
+          </button>
+          <button
+            id="next"
+            class="px-6 py-4 text-[4vw] max-sm:text-[12vw] max-sm:top-[44%]   rounded-full absolute right-0 top-[50%] -translate-y-[50%]"
+          >
+          <i class="ri-arrow-right-wide-line"></i>
+          </button>
+        </div>
+      </div>
+      <div id="page2" class="h-screen w-screen flex justify-around flex-col">
+        <div class="page2-line-up w-full h-[0.1vw] bg-black"></div>
+        <div class="page2-center flex justify-between items-center max-sm:flex-col">
+          <div class="page2-center-left w-fit flex items-center gap-6 relative max-sm:flex-col ">
+            <img
+              class="w-[22vw] ml-[2.1vw] max-sm:w-[40vw] max-sm:-mt-[2vh]"
+              src="./Assets/images/lamborghini-logo-1.svg"
+              alt=""
+            />
+            <div
+              class="page2-center-line1 w-[17vw] h-[1.5px] bg-[#1d8bfa] max-sm:w-[1.5px] max-sm:h-[19.8vh]"
+            ></div>
+            <div
+              class="page2-center-line2 absolute rotate-45 -right-[3.9%] top-[62%] w-[2vw] h-[1.5px] bg-[#1d8bfa] max-sm:top-[101%] max-sm:w-[3vw] max-sm:right-[43.5%]"
+            ></div>
+            <div
+              class="page2-center-line3 absolute -rotate-45 -right-[3.9%] top-[37%] w-[2vw] h-[1.5px] bg-[#1d8bfa] max-sm:top-[101%] max-sm:w-[3vw] max-sm:right-[48.8%]"
+            ></div>
+          </div>
+          <div class="page2-center-right flex items-center max-sm:flex-col max-sm:gap-[50px]">
+            <div class="page2-center-right-text">
+              <h5 class="text-base rgt-base text-[#1d8bfa] max-sm:text-center max-sm:text-[2.15vh] max-sm:mb-[0.5vh]">
+                Lamborghini Museum Experience
+              </h5>
+              <h6 class="text-sm max-sm:text-center max-sm:text-[1.8vh] max-sm:mt-[0.5vh]">
+                Discover the Legacy and Innovation of Lamborghini
+              </h6>
+            </div>
+            <div
+              class="page2-center-right-img mx-[2.3vw] relative w-[29vw] h-[13vw] rounded-xl overflow-hidden max-sm:h-[19vh] max-sm:w-[30vw] max-sm:mt-[20px]"
+            >
+              <img
+                class="h-full w-full object-cover rounded-xl"
+                src="./Assets/images/page2-1.webp"
+                alt=""
+              />
+              <img
+                class="page2-img2 h-full w-full object-cover rounded-xl absolute top-[150%]"
+                src="./Assets/images/page2-2.png"
+                alt=""
+              />
+              <div
+                class="page2-img3 h-full overflow-hidden w-full rounded-xl absolute top-[150%]"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  src="./Assets/images/page2-3.png"
+                  alt=""
+                />
+                <div
+                  class="button rounded-full py-1 px-2 absolute top-[50%] left-[50%] bg-black text-[.5vw] -translate-x-[50%] -translate-y-[50%] cursor-pointer max-sm:text-[0.5vh]"
+                >
+                  <h4>Explore More</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page2-line-down w-full h-[0.1vw] bg-black"></div>
+      </div>
+      <div class="khali h-[1800px] max-sm:h-[200vh]"></div>
+      <div id="page3" class="h-screen w-screen flex justify-around flex-col">
+        <div class="page3-line-up w-full h-[0.1vw] bg-black"></div>
+        <div class="page3-center flex justify-between items-center max-sm:flex-col-reverse max-sm:justify-between max-sm:gap-[30px]">
+          <div class="page3-center-left flex items-center max-sm:flex-col-reverse max-sm:justify-between max-sm:gap-[30px]">
+            <div
+              class="page3-center-left-img mx-[2.3vw] z-90 relative w-[29vw] h-[13vw] rounded-xl overflow-hidden max-sm:mt-[30px] max-sm:h-[19vh] max-sm:w-[30vw]"
+            >
+              <img
+                class="h-full w-full object-cover rounded-xl"
+                src="./Assets/images/page3-1.jpg"
+                alt=""
+              />
+              <img
+                class="page3-img2 h-full w-full object-cover rounded-xl absolute top-[150%]"
+                src="./Assets/images/page3-2.jpg"
+                alt=""
+              />
+              <div
+                class="page3-img3 h-full overflow-hidden w-full rounded-xl absolute top-[150%]"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  src="./Assets/images/page3-3.jpg"
+                  alt=""
+                />
+                <div
+                  class="button rounded-full py-1 px-2 absolute text-[#000] top-[50%] left-[50%] bg-white text-[.5vw] -translate-x-[50%] -translate-y-[50%] cursor-pointer max-sm:text-[0.5vh]"
+                >
+                  <h4>Explore More</h4>
+                </div>
+              </div>
+            </div>
+            <div class="page3-center-left-text ml-[1.6vw] text-right ">
+              <h5 class="text-base text-[#1d8bfa] max-sm:text-[2.15vh] max-sm:mb-[0.5vh]">Lamborghini Store</h5>
+              <h6 class="text-sm max-sm:mt-[10px] max-sm:text-[1.8vh]">
+                Exclusive Merchandise and Lifestyle Accessories
+              </h6>
+            </div>
+          </div>
+          <div
+            class="page3-center-right w-fit flex items-center gap-6 relative max-sm:flex-col-reverse max-sm:justify-between max-sm:gap-[30px]"
+          >
+            <div
+              class="page3-center-line1 w-[17vw] h-[1.5px] bg-[#1d8bfa] max-sm:w-[1.5px] max-sm:h-[19.8vh]"
+            ></div>
+            <div
+              class="page3-center-line2 absolute -rotate-45 -left-[3.9%] top-[62%] w-[2vw] h-[1.5px] bg-[#1d8bfa] max-sm:w-[3vw] max-sm:top-[101%] max-sm:w-[3vw] max-sm:left-[43.8%]"
+            ></div>
+            <div
+              class="page3-center-line3 absolute rotate-45 -left-[3.9%] top-[37%] w-[2vw] h-[1.5px] bg-[#1d8bfa] max-sm:w-[3vw] max-sm:top-[101%] max-sm:left-[48.8%]"
+            ></div>
+            <img
+              class="w-[22vw] mr-[2.1vw] max-sm:-mt-[20px] max-sm:mb-[20px]"
+              src="./Assets/images/lamborghini-logo-1.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="page2-line-down w-full h-[0.1vw] bg-black"></div>
+      </div>
+      <div class="h-[1600px]"></div>
+      <div id="page4" class="flex items-center justify-center w-full h-[100vh]">
+        <div class="our-work-txt text-[#1d8bfa]">
+          <h1 id="our">LAMBORGHINI</h1>
+          <h1 id="work">WORLD</h1>
+        </div>
+        <div class="our-work-txt-div">
+          <div class="scroll-work">
+            <div class="scroll-img">
+              <img
+                class="w-[60vw] h-[60vh] object-cover"
+                src="./Assets/images/LM-1.webp"
+                alt=""
+              />
+              <img
+                class="w-[60vw] h-[60vh] object-cover"
+                src="./Assets/images/LM-2.webp"
+                alt=""
+              />
+              <img
+                class="w-[60vw] h-[60vh] object-cover"
+                src="./Assets/images/LM-3.webp"
+                alt=""
+              />
+              <img
+                class="w-[60vw] h-[60vh] object-cover"
+                src="./Assets/images/LM-4.webp"
+                alt=""
+              />
+              <img
+                class="w-[60vw] h-[60vh] object-cover"
+                src="./Assets/images/LM-5.webp"
+                alt=""
+              />
+              <img
+                class="w-[60vw] h-[60vh] object-cover"
+                src="./Assets/images/LM-6.webp"
+                alt=""
+              />
+              <img
+                class="w-[60vw] h-[60vh] object-cover"
+                src="./Assets/images/LM-7.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <button class="text-[#ededed] max-sm:text-[4.5vw] max-sm:px-[1.7vw] py-[8.5vw]" id="demo">see all</button>
+      </div>
+      <div id="page5" class="page5 h-screen w-full mt-[300px]">
+        <div class="content-page5">
+          <div class="rotate-div">
+            <div id="row-div-2" class="row-div">
+              <div class="img-div">
+                <img src="./Assets/images/image7.png" alt="" />
+              </div>
+              <div class="img-div">
+                <img src="./Assets/images/image5.png" alt="" />
+              </div>
+              <div class="img-div">
+                <img src="./Assets/images/image6.png" alt="" />
+              </div>
+              <div class="img-div">
+                <img src="./Assets/images/image4.png" alt="" />
+              </div>
+            </div>
+            <div id="row-div-3" class="row-div">
+              <div class="img-div">
+                <img src="./Assets/images/image3.png" alt="" />
+              </div>
+              <div class="img-div">
+                <img src="./Assets/images/image2.png" alt="" />
+              </div>
+              <div class="img-div">
+                <img src="./Assets/Images/image4.png" alt="" />
+              </div>
+              <div class="img-div">
+                <img src="./Assets/images/image8.png" alt="" />
+              </div>
+            </div>
+            <div id="row-div-4" class="row-div">
+              <div class="img-div">
+                <img src="./Assets/images/image6.png" alt="" />
+              </div>
+              <div class="img-div">
+                <img src="./Assets/images/image8.png" alt="" />
+              </div>
+              <div class="img-div">
+                <img src="./Assets/images/image5.png" alt="" />
+              </div>
+              <div class="img-div">
+                <img src="./Assets/images/image7.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="overlay-div">
+            <div class="overlay-text">
+              <h1>Stay Connected with Lamborghini</h1>
+              <h4>Be Part of the Legend</h4>
+              <div id="social" class="text-[30px] max-sm:w-[5vw]">
+                <a
+                  href="https://www.instagram.com/lamborghini/?hl=en"
+                  ><i class="ri-instagram-fill"></i
+                ></a>
+                <a
+                  href="https://www.threads.net/@lamborghini"
+                  ><i class="ri-threads-line"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/Lamborghini/"
+                  ><i class="ri-facebook-circle-fill"></i></a>
+                <a
+                  href="https://www.youtube.com/channel/UC9DXZC8BCDOW6pYAQKgozqw"
+                  ><i class="ri-youtube-fill"></i></a>
+                <a
+                  href="https://twitter.com/Lamborghini"
+                  ><i class="ri-twitter-x-line"></i></a>
+                <a
+                  href="https://www.tiktok.com/@lamborghini?lang=en"
+                  ><i class="ri-tiktok-fill"></i></a>
+                <a
+                  href="https://www.tiktok.com/@lamborghini?lang=en"
+                  ><i class="ri-linkedin-box-fill"></i></a>
+                  <a
+                  href="https://www.tiktok.com/@lamborghini?lang=en"
+                  ><i class="ri-weibo-fill"></i></a>
+                  <a
+                  href="https://www.lamborghini.com/en-en/wechat"
+                  ><i class="ri-wechat-fill"></i></a>
+                  <a
+                  href="https://discord.gg/vet6ZBjpFd"
+                  ><i class="ri-discord-fill"></i></a>
+              </div>
+            </div>
+            <div class="scroll-down">
+              <h3 class="max-sm:text-2vw" >SCROLL DOWN</h3>
+              <div class="scroll-p max-sm:w-[10VW] max-sm:h-[3px]">
+                <div class="scrolling max-sm:w-0 max-sm:h-[3px]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer" class="footer text-black bg-[#ededed]">
+        <div class="rounded-div-wrapper">
+          <div class="rounded-div"></div>
+        </div>
+        <div class="footer-content flex w-full  h-auto justify-between p-[4vw]">
+          <div class="foot-left w-[48%] relative max-sm:w-[45%] max-sm:px-[5px] max-sm:py-0 ">
+            <div class="foot-left-top max-sm:w-auto">
+              <div  class="ltopup  flex gap-8 max-sm:text-[11px] max-sm:-mb-[0.1vh] max-sm:mb-[3px] max-sm:gap-[10px] max-sm:flex-wrap max-sm:gap-y-[3px]">
+              <h5>COMPANY</h5>
+              <h5>FINANCIALS</h5>
+              <h5>CAREERS</h5>
+              <h5>CONTACT US</h5>
+              <h5>SUSTAINABILITY</h5>
+              <h5>MEDIA CENTER</h5>
+              </div>
+              <div class="ltopdown flex gap-8 mb-[2vh] max-sm:text-[11px] max-sm:-mb-[0.1vh] max-sm:gap-[10px] max-sm:flex-wrap max-sm:gap-y-[3px] max-sm:mt-[10px]">
+                <h5>PRIVACY & LEGAL</h5>
+                <h5>COOKIE SETTINGS</h5>
+                <h5>SITEMAP</h5>
+                <h5>NEWSLETTER</h5>
+                <h5>ACCESSIBILITY</h5>
+              </div>
+            </div>
+            <h5 class=" max-sm:text-[11px] max-sm:-mb-[0.1vh] mb-[1vh] text-lg">Explore the Legacy</h5>
+            <h6 class="max-sm:text-[9px] max-sm:-mb-[0] leading-[13px] font-[100] mb-[2vh] text-base">Step into the world of Lamborghini, where innovation meets tradition. Our legacy of excellencedrives us to create the most exhilarating sports cars. Discover the passion behind every curveand the power within every roar.</h6>
+            <h5 class=" max-sm:text-[11px] max-sm:-mb-[0.1vh] mb-[1vh] text-lg">Connect with Us</h5>
+            <h6 class="max-sm:text-[9px] max-sm:-mb-[0] leading-[13px] font-[100] mb-[2vh] text-base">Join our community of enthusiasts and stay updated with the latest news, events, and exclusive offers. Follow us on social media and be part of the legend.</h6>       
+          </div>
+          <div class="foot-line w-[1px] bg-black h-auto"></div>
+          <div class="foot-right w-[48%]  max-sm:w-[45%] max-sm:px-[5px] max-sm:py-0 ">
+            <h5 class=" max-sm:text-[11px] max-sm:-mb-[0.1vh] mb-[1vh] text-lg">Contact Us</h5>
+            <h6 class="max-sm:text-[9px] max-sm:-mb-[0] leading-[13px] font-[100] mb-[2vh] text-base">Have questions or need support? Reach out to our customer service team. We're here to assist you.</h6>
+            <h5 class=" max-sm:text-[11px] max-sm:-mb-[0.1vh] mb-[1vh] text-lg">Stay Informed</h5>
+            <h6 class="max-sm:text-[9px] max-sm:-mb-[0] leading-[13px] font-[100] mb-[2vh] text-base">Subscribe to our newsletter and be the first to know about new models, upcoming events, and special promotions.</h6>
+            <h5 class=" max-sm:text-[11px] max-sm:-mb-[0.1vh] mb-[1vh] text-lg">Lamborghini Headquarters</h5>
+            <h6 class="max-sm:text-[9px] max-sm:-mb-[0] leading-[13px] font-[100] mb-[2vh] text-base">Automobili Lamborghini S.p.A. Via Modena, 12, 40019 Sant'Agata Bolognese, Italy</h6>
+            <h5 class=" max-sm:text-[5px] max-sm:leading-[1.5vh] max-sm:mb-[0] mb-[1vh] last text-lg">All rights reserved. © 2024 Automobili Lamborghini S.p.A. Terms of Use | Privacy Policy</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
